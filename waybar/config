@@ -1,0 +1,10 @@
+
+[
+  {
+  "output": [ "eDP-1" ],
+    "include": [
+      "~/.config/waybar/config.jsonc",
+    ],
+  },
+  
+]
