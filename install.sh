@@ -57,6 +57,11 @@ mv ~/.cache/nvim ~/.cache/nvim.bak
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
+# Fonts
+echo -e "${RED}Fonts...${NC}"
+sudo cp -rf fonts ~/.local/share/
+fc-cache
+
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
 echo -e "${RED}And hyprland monitors${NC}"
