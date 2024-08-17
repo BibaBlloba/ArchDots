@@ -218,7 +218,7 @@ tooltip {
 }
 
 #battery.charging {
-  background-color:           #a6e3a1;
+  background-color:           #cba6f7;
   color:                      #F53C3C;
   animation-name:             blink;
   animation-duration:         1.0s;
