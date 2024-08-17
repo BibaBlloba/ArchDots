@@ -1,7 +1,13 @@
 
 [
   {
-  "output": [ "eDP-1" ],
+  "output": [ "DP-1" ],
+    "include": [
+      "~/.config/waybar/config.jsonc",
+    ],
+  },
+  {
+  "output": [ "HDMI-A-1" ],
     "include": [
       "~/.config/waybar/config.jsonc",
     ],

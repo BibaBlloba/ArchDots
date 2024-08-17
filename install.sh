@@ -5,15 +5,18 @@ NC='\033[0m'
 PURPLE='\033[0;35m'
 
 # Enable multilib
-echo -e "${RED}Enable multilib...${NC}"
-sleep 3
-sudo mv /etc/pacman.conf /etc/pacman.conf.bak
-sudo cp pacman.conf /etc/
+# echo -e "${RED}Enable multilib...${NC}"
+# sleep 3
+# sudo mv /etc/pacman.conf /etc/pacman.conf.bak
+# sudo cp pacman.conf /etc/
 
 # Main pakages
 echo -e "${RED}Installing main pakages...${NC}"
 sleep 3
-sudo pacman -Syu --noconfirm git sudo firefox kitty neovim waybar neofetch btop wpaperd hyprlock hyprshot thunar os-prober sddm
+sudo pacman -Syu
+sudo pacman -S git sudo firefox kitty neovim waybar neofetch btop wpaperd hyprlock thunar os-prober sddm fish unzip imw
+chsh -s /bin/fish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | omf install bobthefish | fish
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -25,10 +28,14 @@ rm -rf yay
 echo -e "${RED}Copy dotfiles...${NC}"
 sleep 3
 sudo cp -rf hypr ~/.config/
+sudo cp hypr/* ~/.config/hypr/
 sudo cp -rf waybar ~/.config/
+sudo cp waybar/* ~/.config/waybar/
 sudo cp -rf neofetch ~/.config/
+sudo cp neofetch/* ~/.config/neofetch/
 sudo cp -rf kitty ~/.config/
 sudo cp -rf fish ~/.config/
+sudo cp -rf fish/* ~/.config/fish/
 sudo cp -rf wpaperd ~/.config/
 
 mkdir ~/Documents
@@ -52,4 +59,4 @@ rm -rf ~/.config/nvim/.git
 
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
-echo -e "${RED}And hyprland monitors"
+echo -e "${RED}And hyprland monitors${NC}"
