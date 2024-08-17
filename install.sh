@@ -42,6 +42,14 @@ sudo mv /etc/default/grub /etc/default/grub.bak
 sudo cp grub /etc/default/
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
+# Setting up Astronvim
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+mv ~/.local/state/nvim ~/.local/state/nvim.bak
+mv ~/.cache/nvim ~/.cache/nvim.bak
+git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
 echo -e "${RED}And hyprland monitors"
