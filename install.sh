@@ -67,6 +67,7 @@ unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
 cd SCRIPTDIR
 sudo cp -rf fonts ~/.local/share/
+fc-cache
 
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
