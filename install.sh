@@ -3,6 +3,7 @@
 RED='\033[0;31m'
 NC='\033[0m'
 PURPLE='\033[0;35m'
+SCRIPTDIR=$(pwd)
 
 # Enable multilib
 # echo -e "${RED}Enable multilib...${NC}"
@@ -59,8 +60,13 @@ rm -rf ~/.config/nvim/.git
 
 # Fonts
 echo -e "${RED}Fonts...${NC}"
+mkdir fonts/nerd-fonts -p
+cd fonts/nerd-fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+unzip JetBrainsMono.zip
+rm JetBrainsMono.zip
+cd SCRIPTDIR
 sudo cp -rf fonts ~/.local/share/
-fc-cache
 
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
