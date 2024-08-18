@@ -5,6 +5,8 @@ NC='\033[0m'
 PURPLE='\033[0;35m'
 SCRIPTDIR=$(pwd)
 
+clear
+
 # Enable multilib
 # echo -e "${RED}Enable multilib...${NC}"
 # sleep 3
@@ -72,3 +74,4 @@ fc-cache
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
 echo -e "${RED}And hyprland monitors${NC}"
+echo -e "${RED}Install blahaj (Optional)${NC}"
