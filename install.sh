@@ -17,7 +17,7 @@ clear
 echo -e "${RED}Installing main pakages...${NC}"
 sleep 3
 sudo pacman -Syu
-sudo pacman -S git sudo firefox kitty neovim waybar neofetch btop wpaperd hyprlock thunar os-prober sddm fish unzip imw
+sudo pacman -S git sudo firefox kitty neovim waybar neofetch btop wpaperd hyprlock thunar os-prober sddm fish unzip imw dunst
 chsh -s /bin/fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | omf install bobthefish | fish
 
@@ -40,6 +40,7 @@ sudo cp -rf kitty ~/.config/
 sudo cp -rf fish ~/.config/
 sudo cp -rf fish/* ~/.config/fish/
 sudo cp -rf wpaperd ~/.config/
+sudo cp -rf dunst ~/.config/
 
 mkdir ~/Documents
 sudo cp -rf wallpapers ~/Documents/
@@ -70,6 +71,10 @@ rm JetBrainsMono.zip
 cd SCRIPTDIR
 sudo cp -rf fonts ~/.local/share/
 fc-cache
+
+# Rofi
+yay rofi-wayland
+sudo cp -rf rofi/* ~/.config/rofi/
 
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
