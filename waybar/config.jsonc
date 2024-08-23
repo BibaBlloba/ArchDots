@@ -71,7 +71,7 @@
     },
   },
   "custom/night": {
-    "format": "night",
+    "format": "",
     "on-click": "wlsunset -T 4100",
     "on-click-right": "pkill sunset"
   },
