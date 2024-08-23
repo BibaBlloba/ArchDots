@@ -17,7 +17,7 @@ clear
 echo -e "${RED}Installing main pakages...${NC}"
 sleep 3
 sudo pacman -Syu
-sudo pacman -S git sudo firefox kitty neovim waybar neofetch btop wpaperd hyprlock thunar os-prober sddm fish unzip imw dunst
+sudo pacman -S git sudo firefox kitty neovim waybar neofetch btop wpaperd hyprlock thunar os-prober sddm fish unzip imw dunst wlsunset
 chsh -s /bin/fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | omf install bobthefish | fish
 

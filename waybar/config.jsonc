@@ -31,6 +31,7 @@
     "disk",
   ],
   "modules-right": [
+    "custom/night",
     "custom/walls",
     "custom/lock",
     "tray",
@@ -68,6 +69,11 @@
         "today": "<span color='#f5a97f'><b><u>{}</u></b></span>"
       },
     },
+  },
+  "custom/night": {
+    "format": "night",
+    "on-click": "wlsunset -T 4100",
+    "on-click-right": "pkill sunset"
   },
   "custom/lock": {
     "format": "",

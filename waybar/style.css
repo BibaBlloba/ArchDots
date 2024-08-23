@@ -84,6 +84,7 @@ tooltip {
 #backlight,
 #custom-lock,
 #custom-walls,
+#custom-night,
 
 #backlight {
     background: #000000;
@@ -94,6 +95,10 @@ tooltip {
     border-radius: 7px 7px 7px 7px;
     margin-right: 5px;
     margin-left: 5px;
+}
+
+#custom-night {
+    color: #cba6f7;
 }
 
 #custom-lock {
