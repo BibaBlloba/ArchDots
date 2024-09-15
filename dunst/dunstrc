@@ -1,0 +1,45 @@
+[global]
+font = JetBrainsMono Nerd Font 10
+frame_width = 2
+separator_height = 2
+padding = 8
+horizontal_padding = 10
+transparency = 0
+corner_radius = 8
+word_wrap = true
+ignore_newline = false
+origin = "top-center"
+offset = "15x15"
+width = 350
+shrink = false
+monitor = 0
+follow = mouse
+sort = false
+indicate_hidden = false
+alignment = left
+show_age_threshold = 60
+line_height = 0
+history_length = 20
+show_indicators = true
+icon_path = /usr/share/icons/hicolor/32x32/apps
+scale = false
+
+[urgency_low]
+timeout = 2
+background = "#111314"
+foreground = "#F7F3EA"
+frame_color = "#272627"
+
+[urgency_normal]
+timeout = 5
+background = "#111314"
+foreground = "#F7F3EA"
+frame_color = "#9400D3"
+
+[urgency_critical]
+timeout = 10
+background = "#111314"
+foreground = "#F7F3EA"
+frame_color = "#EA6962"
+
+
