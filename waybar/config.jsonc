@@ -31,6 +31,7 @@
     "disk",
   ],
   "modules-right": [
+    "custom/monitor1",
     "custom/night",
     "custom/walls",
     "custom/lock",
@@ -43,6 +44,13 @@
   "hyprland/window": {
     "format": "{}"
   },
+
+  "custom/monitor1": {
+    "format": "󰍹",
+    "on-click": "hyprctl keyword monitor eDP-1,1920x1080@60,auto,1,",
+    "on-click-right": "hyprctl keyword monitor eDP-1,1920x1080@60,auto,1.5,"
+  },
+
   "hyprland/workspaces": {
     "sort-by-name": true,
     "format": "{id}",
