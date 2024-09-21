@@ -22,6 +22,9 @@ for package in "${PACKAGES[@]}"; do
 	sudo pacman -S --needed --noconfirm "$package"
 done
 
+git config --global credential.helper store
+git config credential.helper 'cache --timeout=900'
+
 chsh -s /bin/fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | omf install bobthefish
 
