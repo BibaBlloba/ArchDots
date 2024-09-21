@@ -73,8 +73,9 @@ sudo cp -rf fonts ~/.local/share/
 fc-cache
 
 # Rofi
-yay rofi-wayland
+yay -S rofi-wayland
 sudo cp -rf rofi1/* ~/.config/rofi/
+yay -S rofi-power-menu
 
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
