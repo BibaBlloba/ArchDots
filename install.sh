@@ -88,8 +88,7 @@ sudo cp -rf ./rofiThemes /home/keka/.local/share/rofi
 sudo cp -rf ./rounded-common.rasi /home/keka/
 
 # Sddm
-sudo mkdir /etc/sddm.conf.d
-sudo cp ./sddm/default.conf /etc/sddm.conf.d/
+sudo cp ./sddm/sddm.conf /etc/
 sudo cp -rf ./sddm/sddm-astronaut-theme /usr/share/sddm/themes/
 
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
