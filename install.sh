@@ -81,6 +81,8 @@ yay -S rofi-wayland
 sudo cp -rf rofi1/* ~/.config/rofi/
 yay -S rofi-power-menu
 
+sudo cp -rf ./rofiThemes /home/keka/.local/share/rofi
+
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
 echo -e "${RED}And hyprland monitors${NC}"
