@@ -3,7 +3,7 @@
 RED='\033[0;31m'
 NC='\033[0m'
 PURPLE='\033[0;35m'
-PACKAGES=("git" "sudo" "firefox" "kitty" "neovim" "waybar" "neofetch" "btop" "wpaperd" "hyprlock" "thunar" "os-prober" "sddm" "fish" "unzip" "imw" "dunst" "wlsunset" "wlsunset" "pavucontrol" "hypridle" "udiskie" "slurp" "grim" "lazygit")
+PACKAGES=("git" "sudo" "firefox" "kitty" "neovim" "waybar" "neofetch" "btop" "wpaperd" "hyprlock" "thunar" "os-prober" "sddm" "fish" "unzip" "imw" "dunst" "wlsunset" "wlsunset" "pavucontrol" "hypridle" "udiskie" "slurp" "grim" "lazygit" "wl-clipboard")
 
 clear
 
