@@ -3,7 +3,7 @@
 RED='\033[0;31m'
 NC='\033[0m'
 PURPLE='\033[0;35m'
-SCRIPTDIR=$(pwd)
+PACKAGES=("git" "sudo" "firefox" "kitty" "neovim" "waybar" "neofetch" "btop" "wpaperd" "hyprlock" "thunar" "os-prober" "sddm" "fish" "unzip" "imw" "dunst" "wlsunset" "wlsunset" "pavucontrol" "hypridle" "udiskie" "slurp" "grim" "lazygit")
 
 clear
 
@@ -17,9 +17,13 @@ clear
 echo -e "${RED}Installing main pakages...${NC}"
 sleep 3
 sudo pacman -Syu
-sudo pacman -S git sudo firefox kitty neovim waybar neofetch btop wpaperd hyprlock thunar os-prober sddm fish unzip imw dunst wlsunset pavucontrol
+
+for package in "${PACKAGES[@]}"; do
+	sudo pacman -S --needed --noconfirm "$package"
+done
+
 chsh -s /bin/fish
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | omf install bobthefish | fish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | omf install bobthefish
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -68,7 +72,7 @@ cd fonts/nerd-fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
 unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
-cd SCRIPTDIR
+cd ../../
 sudo cp -rf fonts ~/.local/share/
 fc-cache
 
