@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 function fish_greeting
-  neofetch
+  neofetch --image_size 250
 end
 
 set -g theme_color_scheme nord
@@ -13,3 +13,4 @@ set -g theme_display_date no
 alias n='sudo -E -s nvim'
 alias yt='yt-dlp'
 alias ufw="sudo ufw"
+alias neofetch="neofetch --image_size 250"
