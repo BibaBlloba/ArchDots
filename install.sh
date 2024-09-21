@@ -87,6 +87,10 @@ yay -S rofi-power-menu
 sudo cp -rf ./rofiThemes /home/keka/.local/share/rofi
 sudo cp -rf ./rounded-common.rasi /home/keka/
 
+# Sddm
+sudo cp ./sddm/default.conf /etc/sddm.conf.d/
+sudo cp -rf ./sddm/sddm-astronaut-theme /usr/share/sddm/themes/
+
 echo -e "${RED}Not forget to set up Grub wallpapers in ${PURPLE}/etc/default/grub"
 echo -e "${PURPLE}sudo grub-mkconfig -o /boot/grub/grub.cfg"
 echo -e "${RED}And hyprland monitors${NC}"
