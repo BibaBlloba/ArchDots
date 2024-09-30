@@ -31,6 +31,7 @@
     "disk",
   ],
   "modules-right": [
+    "custom/layout",
     "custom/monitor1",
     "custom/night",
     "custom/walls",
@@ -49,6 +50,12 @@
     "format": "󰍹",
     "on-click": "hyprctl keyword monitor eDP-1,1920x1080@60,auto,1,",
     "on-click-right": "hyprctl keyword monitor eDP-1,1920x1080@60,auto,1.5,"
+  },
+
+  "custom/layout": {
+    "format": "",
+    "on-click": "hyprctl keyword general:gaps_in 0 && hyprctl keyword general:gaps_out 0 && hyprctl keyword general:border_size 0 && hyprctl keyword decoration:rounding 0",
+    "on-click-right": "hyprctl keyword general:gaps_in 5 && hyprctl keyword general:gaps_out 7 && hyprctl keyword general:border_size 2 && hyprctl keyword decoration:rounding 10"
   },
 
   "hyprland/workspaces": {
