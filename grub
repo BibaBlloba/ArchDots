@@ -43,8 +43,8 @@ GRUB_DISABLE_RECOVERY=true
 #GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
-GRUB_BACKGROUND="/home/keka/Documents/GrubWallpapers/moon.png"
-#GRUB_THEME="/path/to/gfxtheme"
+# GRUB_BACKGROUND="/home/keka/Documents/GrubWallpapers/moon.png"
+GRUB_THEME="/boot/grub/themes/xenlism-grub-arch-1080p/Xenlism-Arch/theme.txt"
 
 # Uncomment to get a beep at GRUB start
 #GRUB_INIT_TUNE="480 440 1"
@@ -54,7 +54,7 @@ GRUB_BACKGROUND="/home/keka/Documents/GrubWallpapers/moon.png"
 #GRUB_SAVEDEFAULT=true
 
 # Uncomment to disable submenus in boot menu
-#GRUB_DISABLE_SUBMENU=y
+GRUB_DISABLE_SUBMENU=y
 
 # Probing for other operating systems is disabled for security reasons. Read
 # documentation on GRUB_DISABLE_OS_PROBER, if still want to enable this

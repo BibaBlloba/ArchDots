@@ -58,6 +58,7 @@ echo -e "${RED}Setting up Grub...${NC}"
 sleep 3
 sudo mv /etc/default/grub /etc/default/grub.bak
 sudo cp grub /etc/default/
+sudo cp -rf ./grub.d/* /etc/grub.d/
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Setting up Astronvim
