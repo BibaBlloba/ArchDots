@@ -3,7 +3,13 @@
 RED='\033[0;31m'
 NC='\033[0m'
 PURPLE='\033[0;35m'
-PACKAGES=("git" "sudo" "firefox" "kitty" "neovim" "waybar" "neofetch" "btop" "wpaperd" "hyprlock" "thunar" "os-prober" "sddm" "fish" "unzip" "imw" "dunst" "wlsunset" "wlsunset" "pavucontrol" "hypridle" "udiskie" "slurp" "grim" "lazygit" "wl-clipboard" "imagemagick" "mpv")
+PACKAGES=("git" "sudo" "firefox" "kitty" "tmux" "neovim" "waybar" "neofetch" "btop" "wpaperd" "hyprlock" "thunar" "os-prober" "sddm" "fish" "unzip" "imw" "dunst" "wlsunset" "pavucontrol" "hypridle" "udiskie" "slurp" "grim" "lazygit" "wl-clipboard" "imagemagick" "mpv")
+
+# Check if root
+if (( $EUID == 0 )); then
+    echo "Dont run in root"
+    exit
+fi
 
 clear
 
@@ -26,7 +32,7 @@ git config --global credential.helper store
 git config credential.helper 'cache --timeout=900'
 
 chsh -s /bin/fish
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | omf install bobthefish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish && omf install bobthefish
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
