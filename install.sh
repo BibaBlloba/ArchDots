@@ -57,7 +57,10 @@ sudo cp -rf dunst ~/.config/
 
 mkdir ~/Documents
 sudo cp -rf wallpapers ~/Documents/
+sudo cp -rf wallpapers_old ~/Documents/
 sudo cp -rf GrubWallpapers ~/Documents/
+sudo chown $USER:$USER ~/Documents/wallpapers
+sudo chown $USER:$USER ~/Documents/wallpapers_old
 
 # Setting up Grub
 echo -e "${RED}Setting up Grub...${NC}"
