@@ -3,7 +3,7 @@
 RED='\033[0;31m'
 NC='\033[0m'
 PURPLE='\033[0;35m'
-PACKAGES=("git" "sudo" "firefox" "kitty" "tmux" "neovim" "waybar" "neofetch" "btop" "wpaperd" "hyprlock" "thunar" "os-prober" "sddm" "fish" "unzip" "imw" "dunst" "wlsunset" "pavucontrol" "hypridle" "udiskie" "slurp" "grim" "lazygit" "wl-clipboard" "imagemagick" "mpv" "swappy")
+PACKAGES=("git" "sudo" "firefox" "kitty" "tmux" "neovim" "waybar" "neofetch" "btop" "wpaperd" "hyprlock" "thunar" "os-prober" "sddm" "fish" "unzip" "imw" "dunst" "wlsunset" "pavucontrol" "hypridle" "udiskie" "slurp" "grim" "lazygit" "wl-clipboard" "imagemagick" "mpv" "swappy" "clipcat")
 
 # Check if root
 if (( $EUID == 0 )); then
@@ -61,6 +61,12 @@ sudo cp -rf wallpapers_old ~/Documents/
 sudo cp -rf GrubWallpapers ~/Documents/
 sudo chown $USER:$USER ~/Documents/wallpapers
 sudo chown $USER:$USER ~/Documents/wallpapers_old
+
+# clipcat
+mkdir -p ~/.config/clipcat
+clipcatd default-config ~/.config/clipcat/clipcatd.toml
+clipcatctl default-config ~/.config/clipcat/clipcatctl.toml
+clipcat-menu default-config ~/.config/clipcat/clipcat-menu.toml
 
 # Setting up Grub
 echo -e "${RED}Setting up Grub...${NC}"
