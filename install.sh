@@ -64,9 +64,10 @@ sudo chown $USER:$USER ~/Documents/wallpapers_old
 
 # clipcat
 mkdir -p ~/.config/clipcat
-clipcatd default-config ~/.config/clipcat/clipcatd.toml
-clipcatctl default-config ~/.config/clipcat/clipcatctl.toml
-clipcat-menu default-config ~/.config/clipcat/clipcat-menu.toml
+clipcatd default-config > ~/.config/clipcat/clipcatd.toml
+clipcatctl default-config > ~/.config/clipcat/clipcatctl.toml
+clipcat-menu default-config > ~/.config/clipcat/clipcat-menu.toml
+clipcatd
 
 # Setting up Grub
 echo -e "${RED}Setting up Grub...${NC}"
