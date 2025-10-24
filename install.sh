@@ -3,7 +3,7 @@
 RED='\033[0;31m'
 NC='\033[0m'
 PURPLE='\033[0;35m'
-PACKAGES=("git" "sudo" "firefox" "kitty" "tmux" "neovim" "waybar" "neofetch" "btop" "wpaperd" "hyprlock" "thunar" "os-prober" "sddm" "fish" "unzip" "imw" "dunst" "wlsunset" "pavucontrol" "hypridle" "udiskie" "slurp" "grim" "lazygit" "wl-clipboard" "imagemagick" "mpv" "swappy" "clipcat" "yazi")
+PACKAGES=("git" "sudo" "firefox" "kitty" "tmux" "neovim" "waybar" "neofetch" "btop" "wpaperd" "hyprlock" "thunar" "os-prober" "sddm" "fish" "unzip" "imw" "dunst" "wlsunset" "pavucontrol" "hypridle" "udiskie" "slurp" "grim" "lazygit" "wl-clipboard" "imagemagick" "mpv" "swappy" "clipcat" "yazi" "bat")
 
 # Check if root
 if (( $EUID == 0 )); then
