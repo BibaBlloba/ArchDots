@@ -184,6 +184,8 @@
     "interval": 600,
     "format": " {percentage_used}%",
     "tooltip-format": "{used} used out of {total} on {path} ",
+    "exec-on-event": true,
+    "on-click": "true",
   },
   "custom/updates": {
     "format": "{}",
