@@ -19,6 +19,7 @@ alias 120hz="hyprctl keyword monitor eDP-1,1920x1200@120,auto,1.5,"
 alias 60hz="hyprctl keyword monitor eDP-1,1920x1200@60,auto,1.5,"
 alias k="kubectl"
 alias l="lazygit"
+alias dr="dotnet run"
 
 function mkcd
   mkdir -p $argv
@@ -32,4 +33,8 @@ function y
 		builtin cd -- "$cwd"
 	end
 	rm -f -- "$tmp"
+end
+
+function VirtualMicro
+	pw-loopback --capture-props='media.class=Audio/Source/Virtual node.name=MainMicro' --playback-props='media.class=Audio/Sink'
 end
